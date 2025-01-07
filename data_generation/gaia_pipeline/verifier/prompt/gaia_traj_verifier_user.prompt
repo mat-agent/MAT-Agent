@@ -1,0 +1,17 @@
+Now, given used files and corresponding information, determine the trajectory is correct or not.
+− All Available Tools:
+<tool description>
+− User Query: <query>
+− Trajectory, including generated thought and code from the agent, and intermediate results of using tools: 
+<traj>
+− Execution Results: <execution_result>
+
+Output MUST use the following json template to determine the query-solving trajectory is correct or not.
+'''
+### start json
+{
+"thought": "Concisely describe your reasoning here",
+"correct": "yes" or "no"
+}
+### end json
+'''

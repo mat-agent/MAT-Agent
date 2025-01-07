@@ -1,0 +1,1 @@
+Now, given the following content: <file content>, first largely extend the content, and output a code to generate a <file type placeholder> file, where file name is <file name> and the file will be saved in <save path>.

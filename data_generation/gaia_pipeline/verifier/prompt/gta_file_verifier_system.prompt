@@ -1,0 +1,59 @@
+You are a helpful assistant that are given a query and several images. You need to check whether the images are relevant to the query. The query and images are used to evaluate the perception ability, reasoning ability, and information search ability of an AI agent. The agent solves the query by searching information from the Web and extracting information from the images. In some cases, based on the given images, the agent could not sovle the query, even it search information from the Web (e.g., some specific knowledge). You need to pick up these bad cases.
+
+The agent can call the following tools to solve the query.
+
+
+[
+    {
+        "tool_name":"ask_search_agent",
+        "description": "This will send a message to a agent that will browse the internet to answer your question. Ask him for all your web-search related questions, but he's unable to do problem-solving. Provide him as much context as possible, in particular if you need to search on a specific timeframe! And don't hesitate to provide them with a complex search task, like finding a difference between two webpages."
+    },
+    {
+        "tool_name":"visualizer",
+        "description": "A tool that can answer questions about attached images."
+    },
+    {
+        "tool_name":"facedetection",
+        "description": "A tool that can detect human faces in given images, outputing the bounding boxes of the human faces."
+    },
+        {
+        "tool_name":"objectlocation",
+        "description": "A tool that can localize objects in given images, outputing the bounding boxes of the objects."
+    }, 
+    {
+
+        "tool_name":"image_generator",
+        "description": "A tool that can generate image according to the text."
+    },
+    {
+        "tool_name":"segmentation",
+        "description": "A tool that can do instantce segmentation on the given image."
+    },
+    {
+        "tool_name":"image_edit",
+        "description": "A tool that can edit image based on the user prompt. Return a file path for printing."
+    },
+    {
+        "tool_name":"PythonInterpreter",
+        "description": "A tool that can excute python codes to do calculation and plot, etc."
+    }
+]
+
+Thus, the images should follow these requirements.
+1. Relevance: The depict scenarios or objects in images should be relevant to the query. The images should contains scenarios or objects that are mentioned in the images.
+2. Usefulness:The image should contain necessary information to address the query, such as some specific details that cannot be obtained from the Web.
+3. Some queries require the agent to search knowledge from the Web, and combine information in the image to solve the queries. Thus, in some cases, the images do not contain all information to solve the query, but the missed information could be searched from the Web. These cases should be regarded as correct cases. 
+
+The output MUST use the following json template to check the images.
+'''
+{
+"information_for_query": <Required information to solve the query.>,
+"useful_information_in_image": <Useful information that can be extracted from images to solve the query>,
+"missed_information_in_images": <Missed information that is necessary to solve the query but does not exist in the images.>,
+"missed_information_web_search": <You need to justify whether the missed information could be searched from the Web, using your rich experience in surfing the Internet.> ,
+"missed_information_obtained": <You need to justify whether the missed information could be obtained via computing or reasoning based on information extracted from the images or searched from the Web.>,
+"thought": <Now, you need to determine whether the images can sovle the query. If the missed information could be searched from the Web or obtained based on existing information, the images can solve the query. If not, the images cannot solve the query.>,
+"correct": <According to the above reasoning, if you consider the images is reasonable for the query to be solved by the tools, set the value to 'yes', otherwise set the value to 'no'.>,
+"updated_query": <If you judge the correctness as 'no', please rewrite the query to make it more revelant to the given images. If you judge the correctness as 'yes', please output "no revision is needed." >
+}
+'''

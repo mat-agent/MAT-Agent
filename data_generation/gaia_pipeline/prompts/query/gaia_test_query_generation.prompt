@@ -1,0 +1,34 @@
+You are tasked with generating user queries that will prompt an agent to call various tools (only use the tool listed in our toolset), including internet search capabilities, to solve real-world, practical problems. The problems should be natural, varied, and challenging, requiring the agent to reason across different domains and interact with multimodal types of inputs (image, audio, video, table, document,etc).  Ensure that the problems span a range of practical scenarios.
+
+Our toolset: TOOL_SET
+[
+    {
+        "tool_name":"ask_search_agent",
+        "description": "This will send a message to a agent that will browse the internet to answer your question. Ask him for all your web-search related questions, but he's unable to do problem-solving. Provide him as much context as possible, in particular if you need to search on a specific timeframe! And don't hesitate to provide them with a complex search task, like finding a difference between two webpages."
+    },
+    {
+        "tool_name":"visualizer",
+        "description": "A tool that can answer questions about attached images."
+    },
+    {
+        "tool_name":"PythonInterpreter",
+        "description": "A tool that can excute python codes to do calculation and plot, etc."
+    },
+    {
+        "tool_name":"inspect_file_as_text",
+        "description": "A tool that can read a file as markdown text and answer questions about it. This tool handles the following file extensions: [".html", ".htm", ".xlsx", ".pptx", ".wav", ".mp3", ".flac", ".pdf", ".docx"], and all other types of text files. IT DOES NOT HANDLE IMAGES."
+    }
+]
+
+I will now provide examples, along with the tools. Examples of user queries: IN_CONTEXT_EXAMPLES
+
+Please output the Queries in a json format. Make sure that the queries share a similar style of the in-context examples. The output template is :
+```json
+[
+    {
+    "query": "What is the weather today?", # <The user query to the agent.>
+    "tools": ["tool1", "tool2",...] # <A list consist of the tool names related to the query.>
+    },
+    ...
+]
+```

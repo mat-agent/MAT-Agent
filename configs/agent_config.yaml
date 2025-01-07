@@ -1,0 +1,52 @@
+
+
+tonggpt:
+  model_name:  gpt-4o-2024-08-06
+  region: eastus
+  api_key: 
+  open_ai_client_type: openai # or azure
+  endpoint: # only for azure, you need to specify the endpoint you are using
+
+visualizer:
+  model_name: gpt-4o-2024-08-06
+  region: eastus
+  api_key: 
+  open_ai_client_type: openai # or azure
+  endpoint: # only for azure, you need to specify the endpoint you are using
+
+qwen:
+  model_name: Qwen/Qwen2-VL-7B-Instruct
+  endpoint: 
+
+agent_controller:
+  engine_type: qwen # qwen, minicpm, tonggpt
+web_qa:
+  model_name: gpt-4o-mini-2024-07-18
+
+internvl2:
+  model_name: OpenGVLab/InternVL2-8B
+
+llava:
+  model_name: Lin-Chen/open-llava-next-llama3-8b
+
+search_agent:
+  type: agent
+  model_name: gpt-4o-2024-08-06
+  region: eastus
+  api_key: 
+
+search_engine:
+  -
+    cx: 
+    key: 
+
+data_generation:
+  # the llm can be azure or openai
+  llm: azure
+  model: gpt-4o-mini-2024-07-18
+  api_key: 
+  ape_base:
+  region: eastus
+  query_embedding_save_path: image_source/support_embedding_sharegpt4v_100k_chartqa_all.npy
+  image_base_path: image_source/open_llava_next
+  caption_data_path:  image_source/chartqa_sharegpt4v_all.json

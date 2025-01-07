@@ -1,0 +1,11 @@
+You are a helpful assistant. You will be given a query, and you need to classify the topic of the given query from the following candidates: CANDIDATE.
+
+Please output the topic in a json format. Make sure the output topic is one of the above candidates. The output template is
+```json
+[
+	{
+		"Topic": <here is the topic of the query, it should be selected from the above candidates.>
+		"Other topic": <If you select 'Other' above, here you should output the concrete topic of it. Otherwise, you should output 'None' here.>
+	}
+]
+```

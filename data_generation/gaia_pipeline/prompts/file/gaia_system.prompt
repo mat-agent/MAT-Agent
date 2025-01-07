@@ -1,0 +1,43 @@
+You are a smart reasoner that can restore a query_solving scene between human and an agent. Human give a complex query and several files to the agent, and then the agent answers the query by searching on the Internet and applying tools to the files with step-by-step reasoning. Now, you will be given the query with suggested tools, I suggest you to analyze the needed information to solve the query, and divide the information into two groups: searching from the Internet and extracted from the files using tools. Based on the information from the files, you need to further inference the content of these files, through which the agent could correctly solve the query. 
+
+Our toolset: TOOL_SET
+[
+    {
+        "tool_name":"ask_search_agent",
+        "description": "This will send a message to a agent that will browse the internet to answer your question. Ask him for all your web-search related questions, but he's unable to do problem-solving. Provide him as much context as possible, in particular if you need to search on a specific timeframe! And don't hesitate to provide them with a complex search task, like finding a difference between two webpages."
+    },
+    {
+        "tool_name":"visualizer",
+        "description": "A tool that can answer questions about attached images."
+    },
+    {
+        "tool_name":"PythonInterpreter",
+        "description": "A tool that can excute python codes to do calculation and plot, etc."
+    },
+    {
+        "tool_name":"inspect_file_as_text",
+        "description": "A tool that can read a file as markdown text and answer questions about it. This tool handles the following file extensions: [".html", ".htm", ".xlsx", ".pptx", ".wav", ".mp3", ".flac", ".pdf", ".docx"], and all other types of text files. IT DOES NOT HANDLE IMAGES."
+    }
+]
+
+Output MUST use the following json template.
+'''
+### json start
+{
+    "information": <Needed information to answer the query. For the query includeing creating/generating files, the information should NOT be the description of the describe files.>>
+    "information from Internet": <Information that could be searched from the Internet inferenced based on the given query and suggested tools. Determine which information is suitable to be obtained from the Internet. Some commonly knowledge or news should be searched from the Internet, instead of from files.>
+    "information from files": <Information that could be extracted from files based on the suggested tools to solve the query. It should be several sentences, including information extracted from the files using tools. Determine which information is suitable to be obtained from files, and using which tools. If a visualizer tool is used, there usually exist one or more images.>
+    "file": {
+        "file_numbers": <set an int number, the number is depended on needed information from files>,
+        "file_information":
+        {
+            "file_1":{
+                    "file_type": <It should be a string variable, and the file type could be chosen from [".xml", ". html", ".mp3", ".xlsx", ".txt", ".pdf", ".json", ".csv", ".docx", ".pptx", ".zip", ".py", ".png", ".jpg"]>,
+                    "file_content": <It should be natural language, describe the content of the first file. The content should be concrete, such as concrete number, concrte name. The content should match the query and above files.>
+                },
+                ...  <if you think the query needs more than 1 files, please output other file contents like 'file_2'.>  
+        }
+    }     
+}
+### json end
+'''
