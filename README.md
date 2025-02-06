@@ -1,7 +1,7 @@
 # <img src="assets/icon.png" alt="drawing" style="width:35px;margin-bottom:-8px;"/> MAT: <ins>M</ins>ulti-modal <ins>A</ins>gent <ins>T</ins>uning: Building a VLM-Driven Agent for Efficient Tool Usage
 
 <p align="center">
-        🤗 <a href="https://huggingface.co/datasets/PengxiangLi/MAT">Hugging Face</a> &nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://mat-agent.github.io/">Webpage</a> &nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://arxiv.org/pdf/2412.15606">Paper</a> &nbsp&nbsp  </a>
+        🤗 <a href="https://huggingface.co/datasets/PengxiangLi/MAT">Hugging Face Dataset</a> &nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://mat-agent.github.io/">Webpage</a> &nbsp&nbsp| &nbsp&nbsp 📑 <a href="https://arxiv.org/pdf/2412.15606">Paper</a> &nbsp&nbsp  </a>
 </p>
 
 # Setup
@@ -18,6 +18,8 @@ If you want to generate data by yourself, install the following environment.
 ```bash
 pip install -r requirements_generation.txt
 ```
+## Dowanload dataset
+You can use `git lfs` or `huggingface-cli` to download the dataset we used in paper from [HF dataset](https://huggingface.co/datasets/PengxiangLi/MAT). **Images related to training is zipped in a file called files.zip**.
 
 ## Download model parameters for vision tools
 You only need to download SAM 2 manually. For other models, `transformers` will do downloading for you.
