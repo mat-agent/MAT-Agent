@@ -420,7 +420,7 @@ if __name__ == "__main__":
 
 
     # redirect the output to a log file 
-    os.mkdir(f'data_generation/gaia_pipeline/log/{timestamp}/')
+    os.makedirs(f'data_generation/gaia_pipeline/log/{timestamp}/', exist_ok=True)
     sys.stdout = open(f'data_generation/gaia_pipeline/log/{timestamp}/{timestamp}_0_query.log', 'a')
 
     print(f"GAIA based Query GENERATION STARTED:")
