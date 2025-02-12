@@ -45,7 +45,7 @@ data_generation:
   llm: azure
   model: gpt-4o-mini-2024-07-18
   api_key: 
-  ape_base:
+  ape_base: 
   region: eastus
   query_embedding_save_path: image_source/support_embedding_sharegpt4v_100k_chartqa_all.npy
   image_base_path: image_source/open_llava_next

@@ -20,7 +20,7 @@ def load_config() -> Union[DictConfig, ListConfig]:
     if "RUN_MODE" in os.environ and os.environ["RUN_MODE"] == "eval":
         return OmegaConf.load("configs/agent_config.yaml")
     
-    return OmegaConf.load("configs/agent_config_zhi.yaml")
+    return OmegaConf.load("configs/agent_config.yaml")
 
 import time
 uuid_builder = get_uuid_builder()
