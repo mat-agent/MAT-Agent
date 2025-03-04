@@ -1,6 +1,6 @@
 
 # <img src="assets/icon.png" alt="icon" style="width:35px;margin-bottom:-8px;"/> MAT: <ins>M</ins>ulti-modal <ins>A</ins>gent <ins>T</ins>uning 
-![author](assets/author.png) 
+![authors](assets/authors.png) 
 
 🚀 **VLM-Powered Agent for Intelligent Tool Orchestration** | 🔧 **Open-source Framework for Multi-modal AI**
 
