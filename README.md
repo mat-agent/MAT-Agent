@@ -1,5 +1,6 @@
 
 # <img src="assets/icon.png" alt="icon" style="width:35px;margin-bottom:-8px;"/> MAT: <ins>M</ins>ulti-modal <ins>A</ins>gent <ins>T</ins>uning 
+![author](assets/author.png) 
 
 🚀 **VLM-Powered Agent for Intelligent Tool Orchestration** | 🔧 **Open-source Framework for Multi-modal AI**
 
@@ -19,8 +20,8 @@
 <!--   🚦 <a href="#quickstart">Quick Start</a> -->
 </p>
 
-![MAT Architecture](assets/framework.jpg)  
-*✨ MAT Framework Overview - Seamless Integration of Vision, Language, and Tools*
+<!-- ![MAT Architecture](assets/framework.jpg)  -->
+<!-- *✨ MAT Framework Overview - Seamless Integration of Vision, Language, and Tools* -->
 
 ## 🌟 Features
 - 🎯 **Precision Tools** - 10+ integrated tools (SAM 2.0, Web Search, OCR, etc.) 
