@@ -1,5 +1,6 @@
 
-# <img src="assets/icon.png" alt="icon" style="width:35px;margin-bottom:-8px;"/> MAT: <ins>M</ins>ulti-modal <ins>A</ins>gent <ins>T</ins>uning [ICLR 2025 (Spotlight)]
+# <img src="assets/icon.png" alt="icon" style="width:35px;margin-bottom:-8px;"/> MAT: <ins>M</ins>ulti-modal <ins>A</ins>gent <ins>T</ins>uning  **🔥 ICLR 2025 (Spotlight)**
+
 ![authors](assets/authors.png) 
 
 🚀 **VLM-Powered Agent for Intelligent Tool Orchestration** | 🔧 **Open-source Framework for Multi-modal AI**
