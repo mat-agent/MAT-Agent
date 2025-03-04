@@ -19,7 +19,7 @@
 <!--   🚦 <a href="#quickstart">Quick Start</a> -->
 </p>
 
-![MAT Architecture](assets/framework.png)  
+![MAT Architecture](assets/framework.jpg)  
 *✨ MAT Framework Overview - Seamless Integration of Vision, Language, and Tools*
 
 ## 🌟 Features
