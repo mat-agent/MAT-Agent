@@ -176,6 +176,11 @@ Run in command line manner.
 bash data_generation.sh
 ```
 
+🌟 Star History
+https://api.star-history.com/svg?repos=mat-agent/MAT-Agent&type=Date
+
+
+
 # Acknowledgement
 Thanks for their brilliant contributions to the community! Here are the codebases we built upon.
 
