@@ -35,7 +35,7 @@
 |--------------|---------|---------|---------|-------|
 | Baseline     |13.21%   | 5.81%   | 0.00%   | 33.97% |
 | **MAT**      | 🚀26.42% | 🚀11.63% | 🚀3.84% | 🚀52.56% |
-# Setup
+# 🛠️ Setup
 
 ## Install environment
 ```bash
@@ -51,6 +51,37 @@ pip install -r requirements_generation.txt
 ```
 ## Dowanload dataset
 You can use `git lfs` or `huggingface-cli` to download the dataset we used in paper from [HF dataset](https://huggingface.co/datasets/PengxiangLi/MAT). **Images related to training is zipped in a file called files.zip**.
+
+
+## Image source
+
+The image captions and caption embeddings can be downloaded via the following link:
+[Google Drive](https://drive.google.com/drive/folders/1Ek6qfmhcaTd7zTEQcBvELh6i7unVhTrk?usp=sharing).
+
+Please follow [ShareGPT4V](https://sharegpt4v.github.io/) to organize the image source as follows:
+```none
+
+├── ...
+├── image_source
+│   ├── llava
+│   │   ├── llava_pretrain
+│   │   │   ├── images
+│   ├── coco
+│   │   ├── train2017
+│   ├── sam
+│   │   ├── images
+│   ├── web-celebrity
+│   │   ├── images
+│   ├── web-landmark
+│   │   ├── images
+│   ├── wikiart
+│   ├── share_textvqa
+│   │   ├── images
+│   ├── chatqa
+│   │   ├── train
+│   │   │   ├── png
+
+```
 
 ## Download model parameters for vision tools
 You only need to download SAM 2 manually. For other models, `transformers` will do downloading for you.
@@ -176,10 +207,8 @@ Run in command line manner.
 bash data_generation.sh
 ```
 
-🌟 Star History
-https://api.star-history.com/svg?repos=mat-agent/MAT-Agent&type=Date
-
-
+## 🌟 Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=your_username/MAT&type=Date)](https://star-history.com/#your_username/MAT&Date)
 
 # Acknowledgement
 Thanks for their brilliant contributions to the community! Here are the codebases we built upon.
