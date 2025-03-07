@@ -208,7 +208,7 @@ bash data_generation.sh
 ```
 
 ## 🌟 Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=your_username/MAT&type=Date)](https://star-history.com/#your_username/MAT&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=your_username/MAT&type=Date)](https://star-history.com/#mat-agent/MAT-Agent&Date)
 
 # Acknowledgement
 Thanks for their brilliant contributions to the community! Here are the codebases we built upon.
