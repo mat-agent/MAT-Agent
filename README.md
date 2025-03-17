@@ -231,6 +231,7 @@ If you find our work helpful, please consider cite our paper 📝 and star us �
 @inproceedings{gao2025multi,
       title={Multi-modal Agent Tuning: Building a VLM-Driven Agent for Efficient Tool Usage},
       author={Gao, Zhi and Zhang, Bofei and Li, Pengxiang and Ma, Xiaojian and Yuan, Tao and Fan, Yue and Wu, Yuwei and Jia, Yunde and Zhu, Song-Chun and Li, Qing},
-      booktitle={The Thirteenth International Conference on Learning Representations}
+      booktitle={The Thirteenth International Conference on Learning Representations （ICLR）},
+      year=2025
 }
 ```
