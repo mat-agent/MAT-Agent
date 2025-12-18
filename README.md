@@ -161,21 +161,37 @@ bash slurm_jobs/job_lora_5_gta_with_verifier.sh
 ```
 Check this scripts for assign data path. It should takes 4 hours on 8X A100 for 50K dataset per epoch.
 
+Here is the simplified version.
+
 ## Qwen-VL
-Refer to official repo [Qwen-VL](https://github.com/QwenLM/Qwen2-VL) for environment setup.
+Choose **one** of the following methods to train the model.
 
+### Option A: Native Scripts
 
-After setup the environment, you can run the script convert dataset from MiniCPM-V to Qwen-VL format:
+Follow the [Qwen-VL](https://github.com/QwenLM/Qwen2-VL) official guide to set up the environment. Then, convert the dataset to Qwen-VL format:
+
 ```bash
 cd experiments/Qwen-VL
-
 python scripts/convert_dataset_v2.py
+
 ```
-Then you can run the script to train the model:
+
+Run the provided scripts to train on specific datasets:
+
 ```bash
+# For GAIA
 bash slurm_jobs/train_gaia.sh
+
+# For GTA
 bash slurm_jobs/train_gta.sh
+
 ```
+
+### Option B: LLaMA Factory
+
+Alternatively, you can use **LLaMA Factory** for training.
+
+> Please refer to this [LLaMA Factory Guide](https://bofei5675.github.io/blog/2025/lf/) for installation and usage details.
 
 ## Evaluation
 To evaluate the model, first modify the `configs/agent_config.yaml` to set the model path. Then run the script:
